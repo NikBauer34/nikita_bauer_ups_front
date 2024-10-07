@@ -3,8 +3,8 @@ import { cn } from "@/lib/utils"
 import React from "react"
 
 export interface EnterButtonProps
-  extends React.InputHTMLAttributes<HTMLButtonElement> {text: string}
-const EnterButton = React.forwardRef<HTMLParagraphElement, EnterButtonProps>(
+  extends React.InputHTMLAttributes<HTMLDivElement> {text: string}
+const EnterButton = React.forwardRef<HTMLDivElement, EnterButtonProps>(
   ({ className, text, ...props }, ref) => {
     return (
       <div className={cn(className, "w-[335px] h-[58px] py-[17px] bg-[#2b56f6] rounded-[50px] justify-center items-center inline-flex")} {...props}>
