@@ -75,7 +75,6 @@ export function Auth() {
 			 {(emailInput.isDirty && emailInput.isEmpty.value) && <Badge variant={'destructive'}>{emailInput.isEmpty.message}</Badge>}
             {(emailInput.isDirty && emailInput.minLengthError.value) && <Badge variant={'destructive'}>{emailInput.minLengthError.message}</Badge>}
             {(emailInput.isDirty && emailInput.maxLengthError.value) && <Badge variant={'destructive'}>{emailInput.maxLengthError.message}</Badge>}
-			<div className='pb-[10px]' />
 			<Input className="text-[#979797] text-base font-gilroy_semibold" placeholder='Пароль' {...passwordInput}/> 
 			{(passwordInput.isDirty && passwordInput.isEmpty.value) && <Badge variant={'destructive'} >{passwordInput.isEmpty.message}</Badge>}
             {(passwordInput.isDirty && passwordInput.minLengthError.value) && <Badge variant={'destructive'}>{passwordInput.minLengthError.message}</Badge>}

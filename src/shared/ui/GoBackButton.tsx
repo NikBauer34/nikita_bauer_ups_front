@@ -7,7 +7,7 @@ export interface GoBackButtonProps
 const GoBackButton = React.forwardRef<HTMLDivElement, GoBackButtonProps>(
   ({ className, text, loading, disabled, ...props }, ref) => {
     return (
-      <div className={cn(className, "w-full h-[58px] py-[17px] bg-[#2b56f6] rounded-[50px] justify-center items-center inline-flex")} {...props}>
+      <div className={cn(className, " h-[58px] py-[17px] bg-[#2b56f6] rounded-[50px] justify-center items-center inline-flex")} {...props}>
         <Button className="text-center text-white text-base font-gilroy_semibold leading-normal" disabled={disabled}>
           {loading ? <Loader size={20} className="animate-spin ml-2"/> : <>{text}</>}
         </Button>

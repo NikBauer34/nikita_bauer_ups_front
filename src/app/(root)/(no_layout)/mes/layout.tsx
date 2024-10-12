@@ -1,4 +1,4 @@
-import { BottomButton } from "@/shared";
+import { BottomButton, BottomChat } from "@/shared";
 import { PropsWithChildren } from "react";
 
 export default function Layout({children}: PropsWithChildren) {
@@ -15,7 +15,7 @@ export default function Layout({children}: PropsWithChildren) {
 
     </section>
 
-    <BottomButton text="Вернуться к “Счета и депозит”"/>
+    <BottomChat />
   </div>
   </div>
   )

@@ -31,9 +31,9 @@ const Bottombar = () => {
     <section className="bottom-bar">
       <div className="w-full h-14 px-5 justify-start items-start gap-1 inline-flex">
   <div className="w-14 h-14 p-4 bg-white rounded-[40px] justify-center items-center gap-2 flex shadow-xl">
-    <Link href={'/'}>
+    <Link href={'/home'}>
     <div className="w-6 h-6 px-[2.50px] py-0.5 justify-center items-center flex">
-    <img className="w-[18px] h-5" src={pathname == '/' ? '/assets/icons/home-black.svg': '/assets/icons/home.svg'} />
+    <img className="w-[18px] h-5" src={pathname == '/home' ? '/assets/icons/home-black.svg': '/assets/icons/home.svg'} />
     </div>
     </Link>
   </div>
@@ -48,9 +48,9 @@ const Bottombar = () => {
 <img className="w-[18px] h-5" src={pathname == '/chat' ? '/assets/icons/chat-black.svg': '/assets/icons/chat.svg'} />
     </div>
     </Link>
-    <Link href={'/card'}>
+    <Link href={'/'}>
     <div className="w-6 h-6 p-[3px] justify-center items-center flex">
-      <img className="w-[18px] h-[18px]" src={pathname == '/card' ? '/assets/icons/card-black.svg': '/assets/icons/card.svg'} />
+      <img className="w-[18px] h-[18px]" src={pathname == '/' ? '/assets/icons/card-black.svg': '/assets/icons/card.svg'} />
     </div>
     </Link>
     <div className="w-6 h-6 px-[1.50px] py-1 justify-center items-center flex" />

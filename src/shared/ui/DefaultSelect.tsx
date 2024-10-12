@@ -9,7 +9,7 @@ const DefaultSelect = React.forwardRef<HTMLSelectElement, DefaultSelectProps>(
 ({ className, placeholder, label, items, disabled, ...props }, ref) => {
   return (
     <Select>
-    <SelectTrigger className={cn(className, "border-none h-[66px] px-5 py-4 bg-[#f6f6f6] rounded-[20px] justify-between items-center inline-flex text-[#252525] font-gilroy_semibold text-[16px]")}>
+    <SelectTrigger className={cn(className, "border-none h-[58px] px-5 py-4 bg-[#f6f6f6] rounded-[20px] justify-between items-center inline-flex text-[#252525] font-gilroy_semibold text-[16px]")}>
     <SelectValue placeholder={placeholder}></SelectValue>
     </SelectTrigger>
     <SelectContent className="bg-[#f6f6f6] font-gilroy_semibold">

@@ -12,6 +12,13 @@ import { ArrowLeft } from "./ui/ArrowLeft";
 import { SecondaryTitle } from "./ui/SecondaryTitle";
 import { GoBackButton } from "./ui/GoBackButton";
 import { DefaultSelect } from "./ui/DefaultSelect";
+import { CopyLink } from "./ui/CopyLink";
+import BottomButton from "./layout/BottomButton";
+import { HelpBadge } from "./ui/HelpBadge";
+import { InfoLabel } from "./ui/InfoLabel";
+import BottomChat from "./layout/BottomChat";
+import { ChatActions } from "./ui/ChatActions";
+import OperationButtons from "./layout/OperationButtons";
 export {
   MainTitle,
   EnterButton,
@@ -26,5 +33,12 @@ export {
   ArrowLeft,
   SecondaryTitle,
   GoBackButton,
-  DefaultSelect
+  DefaultSelect,
+  CopyLink,
+  BottomButton,
+  HelpBadge,
+  InfoLabel,
+  BottomChat,
+  ChatActions,
+  OperationButtons
 }

@@ -1,4 +1,7 @@
 import { BottomButton } from "@/shared";
+import Bottombar from "@/shared/layout/Bottombar";
+import LeftSidebar from "@/shared/layout/LeftSidebar";
+import Topbar from "@/shared/layout/TopBar";
 import { PropsWithChildren } from "react";
 
 export default function Layout({children}: PropsWithChildren) {
@@ -15,7 +18,7 @@ export default function Layout({children}: PropsWithChildren) {
 
     </section>
 
-    <BottomButton text="Вернуться к “Счета и депозит”"/>
+    <BottomButton text='Вернуться к “Счета и депозит”'/>
   </div>
   </div>
   )
