@@ -5,14 +5,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 export const bottombarLinks = [
   {
-    imgURL: "/assets/icons/home.svg",
     route: "/",
-    label: "Home",
+    label: "home",
   },
   {
-    imgURL: "/assets/icons/wallpaper.svg",
     route: "/explore",
-    label: "Explore",
+    label: "document",
   },
   {
     imgURL: "/assets/icons/bookmark.svg",
@@ -31,27 +29,40 @@ const Bottombar = () => {
 
   return (
     <section className="bottom-bar">
-      {bottombarLinks.map((link) => {
-        const isActive = pathname === link.route;
-        return (
-          <Link
-            key={`bottombar-${link.label}`}
-            href={link.route}
-            className={`${ 
-              isActive && "rounded-[10px] bg-primary-500 "
-            } flex-center flex-col gap-1 p-2 transition text-white`}>
-            <Image
-              src={link.imgURL}
-              alt={link.label}
-              width={16}
-              height={16}
-              className={`${isActive && "invert-white"}`}
-            />
-
-            <p className="tiny-medium text-light-2">{link.label}</p>
-          </Link>
-        );
-      })}
+      <div className="w-full h-14 px-5 justify-start items-start gap-1 inline-flex">
+  <div className="w-14 h-14 p-4 bg-white rounded-[40px] justify-center items-center gap-2 flex shadow-xl">
+    <Link href={'/'}>
+    <div className="w-6 h-6 px-[2.50px] py-0.5 justify-center items-center flex">
+    <img className="w-[18px] h-5" src={pathname == '/' ? '/assets/icons/home-black.svg': '/assets/icons/home.svg'} />
+    </div>
+    </Link>
+  </div>
+  <div className="grow shrink basis-0 h-14 py-[18px] bg-white shadow-xl rounded-[40px] justify-center items-stretch gap-[30px]  ml-3 mr-3 pl-12 flex">
+    <Link href={'/document'}>
+  <div className="w-6 h-6 px-[3px] py-0.5 justify-center items-center flex">
+      <img className="w-[18px] h-5" src={pathname == '/document' ? '/assets/icons/document-black.svg': '/assets/icons/document.svg'} />
+    </div>
+    </Link>
+    <Link href={'/chat'}>
+    <div className="w-6 h-6 px-[3px] py-0.5 justify-center items-center flex">
+<img className="w-[18px] h-5" src={pathname == '/chat' ? '/assets/icons/chat-black.svg': '/assets/icons/chat.svg'} />
+    </div>
+    </Link>
+    <Link href={'/card'}>
+    <div className="w-6 h-6 p-[3px] justify-center items-center flex">
+      <img className="w-[18px] h-[18px]" src={pathname == '/card' ? '/assets/icons/card-black.svg': '/assets/icons/card.svg'} />
+    </div>
+    </Link>
+    <div className="w-6 h-6 px-[1.50px] py-1 justify-center items-center flex" />
+  </div>
+  <div className="w-14 h-14 p-4 bg-white shadow rounded-[40px] justify-center items-center gap-2 flex shadow-xl">
+  <Link href={'/profile'}>
+    <div className="w-6 h-6 px-1 py-0.5 justify-center items-center flex">
+      <img className="w-4 h-5 hue-rotate-30" src={pathname == '/profile' ? '/assets/icons/profile-black.svg': '/assets/icons/profile.svg'} />
+    </div>
+    </Link>
+  </div>
+</div>
     </section>
   );
 };

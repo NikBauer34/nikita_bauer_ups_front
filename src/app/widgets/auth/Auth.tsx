@@ -17,21 +17,28 @@ import { Form } from '@/components/ui/form'
 import styles from './Auth.module.scss'
 import { AuthFields } from './AuthFields'
 import { Social } from './Social'
-import { EnterButton, MainParagraph, MainTitle } from '@/shared'
+import { EnterButton, MainParagraph, MainTitle, useInputValidation } from '@/shared'
 import { Input } from '@/components/ui/input'
 import { useRouter } from 'next/navigation'
 import { signIn } from 'next-auth/react'
+import { LineTitle, SocialIcon } from '@/shared'
+import { Badge } from '@/components/ui/badge'
 
 export function Auth() {
+	let emailInput = useInputValidation('', {isEmpty: {value: true, message: 'Почта не может быть пустой'}, minLength: {value: 3, message: 'Почта не может быть меньше трех символов'}, maxLength: {value: 12, message: 'Почта не может быть больше 12 символов'}})
+  let passwordInput = useInputValidation('', {isEmpty: {value: true, message: 'Пароль не может быть пустым'}, minLength: {value: 3, message: 'Пароль не может быть меньше трех символов'}, maxLength: {value: 12, message: 'Пароль не может быть больше 12 символов'}})
 	const router = useRouter()
+	let [loading, setLoading] = useState(false)
 	const [isReg, setIsReg] = useState(false)
 	async function onSubmit(e: SyntheticEvent) {
 		e.preventDefault()
+		setLoading(true)
 		const res = await signIn('credentials', {
 			email: 'email',
 			password: 'uuoi',
 			redirect: false
 		})
+		setLoading(false)
 		router.push('/')
 	}
 
@@ -55,34 +62,32 @@ export function Auth() {
 				/>
 					<CardHeader className={styles.header}>
 						<CardTitle>
-							<MainTitle text={isReg ? 'Зарегистрироваться' : 'Войти'} />
+							<MainTitle>{isReg ? 'Зарегистрироваться' : 'Войти'}</MainTitle>
 						</CardTitle>
 						{/* <CardDescription className='pb-[40px]'> */}
-						<MainParagraph text='Добро пожаловать!' />
-<MainParagraph text='
-Войдите чтобы продолжить' />
+						<MainParagraph>Добро пожаловать! <br />
+						Войдите чтобы продолжить</MainParagraph>
 						{/* </CardDescription> */}
 					</CardHeader>
 					<CardContent className={styles.content}>
   
-       <Input className="text-[#979797] text-base font-gilroy_semibold" placeholder='Email'/>
+       <Input className="text-[#979797] text-base font-gilroy_semibold" placeholder='Email' {...emailInput}/>
+			 {(emailInput.isDirty && emailInput.isEmpty.value) && <Badge variant={'destructive'}>{emailInput.isEmpty.message}</Badge>}
+            {(emailInput.isDirty && emailInput.minLengthError.value) && <Badge variant={'destructive'}>{emailInput.minLengthError.message}</Badge>}
+            {(emailInput.isDirty && emailInput.maxLengthError.value) && <Badge variant={'destructive'}>{emailInput.maxLengthError.message}</Badge>}
 			<div className='pb-[10px]' />
-			<Input className="text-[#979797] text-base font-gilroy_semibold" placeholder='Email'/> 
-			<EnterButton text='Войти' className='mt-[30px] mb-[33px]' onClick={async (e) => await onSubmit(e)}/> 
-			<div className="float-left w-[100%] border-t-[1px] border-solid border-[#ccc] text-center text-[#979797]"><b className='inline-block relative top-[-12px] w-[140px] h-[16px] text-center bg-[#fff] z-1 font-gilroy_semibold'>или войти через</b></div>
-			<div className=' w-full flex justify-center'>
-			<div className="h-14 p-3.5 bg-white rounded-[15px] border border-[#e0e0e0] justify-start items-start gap-2.5 inline-flex justify-self-center">
-  <div className="w-7 h-7 justify-center items-center flex">
-    <div className="w-5 h-5 relative flex-col justify-start items-start flex" />
-		<Image src={'/assets/icons/googl.svg'} alt='google' width={30} height={30} />
-  </div>
-</div>
-</div>
+			<Input className="text-[#979797] text-base font-gilroy_semibold" placeholder='Пароль' {...passwordInput}/> 
+			{(passwordInput.isDirty && passwordInput.isEmpty.value) && <Badge variant={'destructive'} >{passwordInput.isEmpty.message}</Badge>}
+            {(passwordInput.isDirty && passwordInput.minLengthError.value) && <Badge variant={'destructive'}>{passwordInput.minLengthError.message}</Badge>}
+            {(passwordInput.isDirty && passwordInput.maxLengthError.value) && <Badge variant={'destructive'}>{passwordInput.maxLengthError.message}</Badge>}
+			<EnterButton text='Войти' className='mt-[70px] mb-[33px]' onClick={async (e) => await onSubmit(e)} disabled={loading || (!emailInput.isInputValid || !passwordInput.isInputValid)} loading={loading}/> 
+			<LineTitle className='mb-[40px]'>или войти через</LineTitle>
+			<SocialIcon text='google' />
 					</CardContent>
 					<CardFooter className={styles.footer}>
-						<span className=' text-[#979797]'>{isReg ? 'Уже есть аккаунт?' : 'Еще нет аккаунта?'}</span>
+						<span className=' text-[#979797]'>{isReg ? 'Уже есть аккаунт?' : 'Нет аккаунта?'}</span>
 						<button onClick={() => setIsReg(!isReg)} className='text-[#2B56F6]'>
-							{isReg ? 'Войти' : 'Создать'}
+							{isReg ? 'Войти' : 'Зарегистрируйтесь'}
 						</button>
 					</CardFooter>
 				</Card>

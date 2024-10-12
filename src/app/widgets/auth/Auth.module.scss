@@ -9,10 +9,10 @@
 		@apply h-full flex flex-col items-center justify-center;
 
 		> .card {
-			@apply border-none p-6 flex flex-col items-center justify-center w-[380px];
+			@apply border-none p-6 flex flex-col w-[400px];
 
 			> .header {
-				@apply text-center pb-5;
+				@apply pl-0 ml-0 mb-[50px]  pb-5;
 
 				> h3 {
 					@apply pb-1 text-3xl font-bold;
@@ -20,7 +20,7 @@
 			}
 
 			> .content {
-				@apply p-0 w-full;
+				@apply p-0 w-full mb-[20px];
 
 				form {
 					@apply space-y-5;
@@ -44,7 +44,7 @@
 			}
 
 			> .footer {
-				@apply p-0 mt-4 text-sm text-muted-foreground text-[14px] font-mont_semibold;
+				@apply p-0 mt-4 text-sm flex items-center justify-center text-muted-foreground text-[14px] font-mont_semibold;
 
 				> button {
 					@apply ml-1 text-sky-600;

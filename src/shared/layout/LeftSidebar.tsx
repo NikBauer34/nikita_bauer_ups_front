@@ -44,7 +44,7 @@ const LeftSidebar = () => {
     await signOut()
   }
   return (
-    <nav className="leftsidebar">
+    <nav className="leftsidebar overflow-scroll custom-scrollbar">
       <div className="flex flex-col gap-11">
         <Link href="/" className="flex gap-3 items-center">
           <img
@@ -97,7 +97,7 @@ const LeftSidebar = () => {
 
       <Button
         variant="ghost"
-        className="shad-button_ghost text-white"
+        className="shad-button_ghost text-white bottom-0 "
         onClick={async (e) => await onLogOut(e)}>
         <img src="/assets/icons/logout.svg" alt="logout" />
         <p className="small-medium lg:base-medium">Logout</p>
