@@ -193,10 +193,10 @@
     @apply z-50 flex flex-between w-full sticky bottom-[60px] rounded-t-[20px] bg-transparent px-5 py-4 md:hidden;
   }
   .bottom-button {
-    @apply z-50 flex flex-between w-full sticky bottom-0 md:hidden visible justify-center items-center
+    @apply z-50 flex flex-between w-full sticky bottom-[60px] md:hidden visible justify-center items-center
   }
   .bottom-chat {
-    @apply z-50 w-full sticky bottom-0  visible
+    @apply z-50 w-full sticky bottom-[60px]  visible
   }
 
   /* File uploader */
