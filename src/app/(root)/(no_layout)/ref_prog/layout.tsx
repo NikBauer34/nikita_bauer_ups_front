@@ -1,7 +1,3 @@
-import { BottomButton, BottomRouterButton } from "@/shared";
-import Bottombar from "@/shared/layout/Bottombar";
-import LeftSidebar from "@/shared/layout/LeftSidebar";
-import Topbar from "@/shared/layout/TopBar";
 import { PropsWithChildren } from "react";
 
 export default function Layout({children}: PropsWithChildren) {
@@ -18,7 +14,7 @@ export default function Layout({children}: PropsWithChildren) {
 
     </section>
 
-    <BottomRouterButton text='Вернуться к “Счета и депозит”' route="/"/>
+    {/* <BottomRouterButton text='Вывод средств' route="/req"/> */}
   </div>
   </div>
   )

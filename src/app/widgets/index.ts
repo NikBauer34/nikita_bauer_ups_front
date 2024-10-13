@@ -5,6 +5,9 @@ import Req from "./req/Req";
 import Chat from "./chat/Chat";
 import Mes from "./mes/Mes";
 import Home from "./home/Home";
+import Operation from "./operation/Operation";
+import OpReq from "./opReq/OpReq";
+import Profile from "./profile/Profile";
 export {
   Deposit,
   Fill,
@@ -12,5 +15,8 @@ export {
   Req,
   Chat,
   Mes,
-  Home
+  Home,
+  Operation,
+  OpReq,
+  Profile
 }
