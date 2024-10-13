@@ -190,7 +190,7 @@
 
   /* Bottom bar */
   .bottom-bar {
-    @apply z-50 flex-between w-full sticky bottom-[60px] rounded-t-[20px] bg-transparent px-5 py-4 md:hidden;
+    @apply z-50 flex flex-between w-full sticky bottom-[60px] rounded-t-[20px] bg-transparent px-5 py-4 md:hidden;
   }
   .bottom-button {
     @apply z-50 flex flex-between w-full sticky bottom-0 md:hidden visible justify-center items-center

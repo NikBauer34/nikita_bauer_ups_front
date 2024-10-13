@@ -28,7 +28,7 @@ const Bottombar = () => {
   const pathname = usePathname()
 
   return (
-    <section className="bottom-button">
+    <section className="bottom-bar">
       <div className="w-full h-14 px-5 justify-center items-center gap-1 inline-flex pb-[10px]">
   <div className="w-14 h-14 p-4 bg-white rounded-[40px] justify-center items-center gap-2 flex shadow-xl">
     <Link href={'/home'}>
