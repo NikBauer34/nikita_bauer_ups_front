@@ -19,6 +19,7 @@ import { InfoLabel } from "./ui/InfoLabel";
 import BottomChat from "./layout/BottomChat";
 import { ChatActions } from "./ui/ChatActions";
 import OperationButtons from "./layout/OperationButtons";
+import BottomRouterButton from "./layout/BottomRouterButton";
 export {
   MainTitle,
   EnterButton,
@@ -40,5 +41,6 @@ export {
   InfoLabel,
   BottomChat,
   ChatActions,
-  OperationButtons
+  OperationButtons,
+  BottomRouterButton
 }

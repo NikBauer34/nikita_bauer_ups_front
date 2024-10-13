@@ -1,4 +1,4 @@
-import { BottomButton } from "@/shared";
+import { BottomButton, BottomRouterButton } from "@/shared";
 import Bottombar from "@/shared/layout/Bottombar";
 import LeftSidebar from "@/shared/layout/LeftSidebar";
 import Topbar from "@/shared/layout/TopBar";
@@ -18,7 +18,7 @@ export default function Layout({children}: PropsWithChildren) {
 
     </section>
 
-    <BottomButton text='Вывод средств'/>
+    <BottomRouterButton text='Вывод средств' route="/req"/>
   </div>
   </div>
   )

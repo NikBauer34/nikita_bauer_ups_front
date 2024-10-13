@@ -3,7 +3,7 @@ import { Deposit } from "@/app/widgets";
 import { Input } from "@/components/ui/input";
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectGroup, SelectLabel, SelectItem } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
-import { ArrowLeft, CopyLink, DefaultSelect, GoBackButton, MainTitle, SecondaryParagraph, SecondaryTitle } from "@/shared";
+import { ArrowLeft, CopyLink, DefaultSelect, EnterButton, GoBackButton, MainTitle, SecondaryParagraph, SecondaryTitle } from "@/shared";
 import { useRouter } from "next/navigation";
 export default function Output() {
   const router = useRouter()
@@ -31,7 +31,7 @@ export default function Output() {
 <DefaultSelect className="w-[335px] mb-[10px]" placeholder="Выберите валюту" label="Валюта" items={['Доллар США (USD)']} />
 <Input className="text-[#979797] text-base font-gilroy_semibold" mb={'80'} placeholder='Реквизиты'/>
 <Input className="text-[#979797] text-base font-gilroy_semibold" placeholder='Сумма'/>
-<GoBackButton text="Вывод средств" className="mt-[110px] invisible md:visible w-full" onClick={() => router.push('/req')}></GoBackButton>
+<EnterButton text="Вывод средств" className="mt-[110px] invisible md:visible w-full" onClick={() => router.push('/req')}></EnterButton>
   </div>
       </div>
     </div>
