@@ -6,11 +6,10 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-1">
+    <div className="flex flex-1 mb-[70px] md:mb-[0px]">
     <div className="common-container">
-      <div className="flex flex-col">
+      <div className="flex flex-col items-start justify-center w-[335px] mb-[70px] md:mb-[0px]">
   <Deposit />
-  <h1 className="mt-[100px] invisible">hh</h1>
   </div>
       </div>
     </div>

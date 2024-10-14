@@ -8,6 +8,8 @@ import Home from "./home/Home";
 import Operation from "./operation/Operation";
 import OpReq from "./opReq/OpReq";
 import Profile from "./profile/Profile";
+import RefProg from "./RefProg/RefProg";
+import Document from "./document/Document";
 export {
   Deposit,
   Fill,
@@ -18,5 +20,7 @@ export {
   Home,
   Operation,
   OpReq,
-  Profile
+  Profile,
+  RefProg,
+  Document
 }

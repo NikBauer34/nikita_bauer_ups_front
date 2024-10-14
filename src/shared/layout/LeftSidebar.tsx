@@ -8,28 +8,28 @@ import { SyntheticEvent } from "react";
 export const sidebarLinks = [
   {
     imgURL: "/assets/icons/home.svg",
+    route: "/home",
+    label: "Главная",
+  },
+  {
+    imgURL: "/assets/icons/document.svg",
+    route: "/document",
+    label: "История заданий",
+  },
+  {
+    imgURL: "/assets/icons/chat.svg",
+    route: "/chat",
+    label: "Чат",
+  },
+  {
+    imgURL: "/assets/icons/card.svg",
     route: "/",
-    label: "Home",
+    label: "Счета",
   },
   {
-    imgURL: "/assets/icons/wallpaper.svg",
-    route: "/explore",
-    label: "Explore",
-  },
-  {
-    imgURL: "/assets/icons/people.svg",
-    route: "/all-users",
-    label: "People",
-  },
-  {
-    imgURL: "/assets/icons/bookmark.svg",
-    route: "/saved",
-    label: "Saved",
-  },
-  {
-    imgURL: "/assets/icons/gallery-add.svg",
-    route: "/create-post",
-    label: "Create Post",
+    imgURL: "/assets/icons/profile.svg",
+    route: "/profile",
+    label: "Профиль",
   },
 ];
 export type INavLink = {
@@ -48,9 +48,9 @@ const LeftSidebar = () => {
       <div className="flex flex-col gap-11">
         <Link href="/" className="flex gap-3 items-center">
           <img
-            src="/assets/images/logo.svg"
+            src="/assets/icons/vector.svg"
             alt="logo"
-            width={170}
+            width={120}
             height={36}
           />
         </Link>
@@ -100,7 +100,7 @@ const LeftSidebar = () => {
         className="shad-button_ghost text-white bottom-0 "
         onClick={async (e) => await onLogOut(e)}>
         <img src="/assets/icons/logout.svg" alt="logout" />
-        <p className="small-medium lg:base-medium">Logout</p>
+        <p className="small-medium lg:base-medium">Выйти</p>
       </Button>
     </nav>
   );

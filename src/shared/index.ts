@@ -27,6 +27,8 @@ import { useMediaQuery } from "./hooks/useMediaQuery";
 import { PersonBadge } from "./ui/PersonBadge";
 import { InviteBadge } from "./ui/InviteBadge";
 import { PinInput } from "./ui/PinInput";
+import { DailyTabs } from "./ui/DailyTabs";
+import { OutBadge } from "./ui/OutBadge";
 export {
   MainTitle,
   EnterButton,
@@ -56,5 +58,7 @@ export {
   useMediaQuery,
   PersonBadge,
   InviteBadge,
-  PinInput
+  PinInput,
+  DailyTabs,
+  OutBadge
 }

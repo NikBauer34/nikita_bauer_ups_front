@@ -8,7 +8,7 @@ const PinInput = React.forwardRef<HTMLParagraphElement, PinInputProps>(
     return (
       <div className={cn(className, "grow shrink basis-0 h-[58px] px-[18px] py-2.5 bg-[#f6f6f6] rounded-[15px] justify-center items-center gap-2 flex")} {...props}>
       <div className="grow shrink basis-0 h-[38px] flex-col justify-center items-center inline-flex">
-        <div className="self-stretch text-center text-[#2b56f6] text-[22px] font-bold font-['Mont'] leading-[33px]">{data}</div>
+        <div className="self-stretch text-center text-[#2b56f6] text-[22px] font-mont_bold leading-[33px]">{data}</div>
       </div>
     </div>
     )

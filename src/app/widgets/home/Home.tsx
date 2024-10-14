@@ -4,9 +4,9 @@ import Operations from "./Operations";
 
 export default function Home() {
   return (
-    <div className="flex flex-1 mb-[70px] md:mb-[0px]">
+    <div className="flex flex-1 mb-[90px] md:mb-[0px]">
     <div className="common-container">
-      <div className="flex flex-col items-start justify-center w-[335px] mb-[70px] md:mb-[0px]">
+      <div className="flex flex-col items-start justify-center w-[335px] mb-[90px] md:mb-[0px]">
 
       <MainTitle className="self-start">Главная</MainTitle>
       <Income />

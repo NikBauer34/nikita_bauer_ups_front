@@ -80,7 +80,7 @@ export function Auth() {
             {(passwordInput.isDirty && passwordInput.minLengthError.value) && <Badge variant={'destructive'}>{passwordInput.minLengthError.message}</Badge>}
             {(passwordInput.isDirty && passwordInput.maxLengthError.value) && <Badge variant={'destructive'}>{passwordInput.maxLengthError.message}</Badge>}
 			<EnterButton text='Войти' className='mt-[70px] mb-[33px]' onClick={async (e) => await onSubmit(e)} disabled={loading || (!emailInput.isInputValid || !passwordInput.isInputValid)} loading={loading}/> 
-			<LineTitle className='mb-[40px]'>или войти через</LineTitle>
+			<LineTitle className='mb-[20px]'>или войти через</LineTitle>
 			<SocialIcon text='google' />
 					</CardContent>
 					<CardFooter className={styles.footer}>

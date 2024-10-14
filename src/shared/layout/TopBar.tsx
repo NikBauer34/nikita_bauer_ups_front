@@ -17,11 +17,13 @@ const Topbar = () => {
         </Link>
 
         <div className="flex gap-4">
+          <Link href={'/login'}>
           <Button
             variant="ghost"
             className="shad-button_ghost">
             <img src="/assets/icons/logout.svg" alt="logout" />
           </Button>
+          </Link>
           <Link href={`/`} className="flex-center gap-3">
             <Image
             width="0"
