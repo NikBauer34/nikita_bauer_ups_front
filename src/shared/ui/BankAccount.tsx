@@ -6,7 +6,7 @@ extends React.InputHTMLAttributes<HTMLParagraphElement> {pincode: string, bank_t
 const BankAccount = React.forwardRef<HTMLParagraphElement, BankAccountProps>(
   ({ className, children, pincode, bank_title, bank_image, account_rubles, ...props }, ref) => {
     return (
-      <div className={cn(className, 'h-[84px] px-5 py-4 bg-[#f6f6f6] rounded-[20px] justify-between items-center inline-flex mb-2')} {...props}>
+      <div className={cn(className, 'w-full h-[84px] px-5 py-4 bg-[#f6f6f6] rounded-[20px] justify-between items-center inline-flex mb-2')} {...props}>
   <div className="justify-start items-center gap-2 flex">
     <img className="w-8 h-8 rounded-full" src={`/assets/icons/${bank_image}`} />
     <div className="flex-col justify-start items-start inline-flex">

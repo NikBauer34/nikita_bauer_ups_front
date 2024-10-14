@@ -6,7 +6,7 @@ const DepositTable = React.forwardRef<HTMLParagraphElement, DepositTableProps>(
   ({ className, children, depositRubles, availableRubles, onFill, onOutput,  ...props }, ref) => {
     return (
       
-<div className={cn(className, "h-[341px] p-5 bg-[#f6f6f6] rounded-[30px] flex-col justify-start items-start gap-4 inline-flex")}>
+<div className={cn(className, "w-full h-[341px] p-5 bg-[#f6f6f6] rounded-[30px] flex-col justify-start items-start gap-4 inline-flex")}>
   <div className="self-stretch h-[196px] flex-col justify-start items-start gap-4 flex mb-4">
     <div className="h-[82px] flex-col justify-start items-start gap-2 flex">
       <div className="self-stretch text-[#979797] text-base font-gilroy_semibold text-[16px]">Депозит:</div>
