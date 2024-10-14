@@ -20,8 +20,12 @@ export default function Page({
 
     <div className="flex flex-col self-center items-center mt-[40px]">
         <Image src={`/assets/icons/${searchParams?.type}.svg`} alt="no" width={88} height={88} ></Image>
+        {searchParams?.type == 'success' ? (
+          <SecondaryTitle><div className="flex flex-col items-center mt-[20px]">Пополнение зачисленно</div></SecondaryTitle>
+        ) : (
+          <SecondaryTitle><div className="flex flex-col items-center mt-[20px]">Пополнение не выполнено</div></SecondaryTitle>
+        )}
 
-      <SecondaryTitle><div className="flex flex-col items-center mt-[20px]">Пополнение зачисленно</div></SecondaryTitle>
     </div>
     <div className="flex flex-col self-start mb-[30px]">
       
