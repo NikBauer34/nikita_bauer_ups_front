@@ -29,6 +29,8 @@ import { InviteBadge } from "./ui/InviteBadge";
 import { PinInput } from "./ui/PinInput";
 import { DailyTabs } from "./ui/DailyTabs";
 import { OutBadge } from "./ui/OutBadge";
+import DocumentButtons from "./layout/DocumentButtons";
+import { NO_INDEX_PAGE, SITE_DESCRIPTION, SITE_NAME } from "./constants/seo";
 export {
   MainTitle,
   EnterButton,
@@ -60,5 +62,9 @@ export {
   InviteBadge,
   PinInput,
   DailyTabs,
-  OutBadge
+  OutBadge,
+  DocumentButtons,
+  NO_INDEX_PAGE,
+  SITE_DESCRIPTION,
+  SITE_NAME
 }
